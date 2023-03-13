@@ -32,6 +32,27 @@ public class KodeBuah
         }
     }
 }
+public class PosisiKarakterGame
+{
+    enum State {Berdiri,Jongkok,Tengkurap,Terbang};
+    public Posisi()
+    {
+        State state = state.Berdiri;
+        string[] screenName = { "Berdiri", "Jongkok", "Tengkurap", "Terbang" };
+        if(state == State.Berdiri)
+        {
+            Console.WriteLine(screenName[0]);
+            Console.Write("Enter Command: ");
+            string command = Console.ReadLine();
+            switch (state)
+            {
+                case State.Berdiri:
+                    if(command == 'W')
+            }
+        }
+    }
+    
+}
 public class Program
 {
     static void Main(string[] args)
@@ -43,5 +64,7 @@ public class Program
         Console.WriteLine("Kode Buah Semangka: " + kodebuah.getKodeBuah("Semangka"));
         Console.WriteLine("Kode Buah Anggur: " + kodebuah.getKodeBuah("Anggur"));
         Console.WriteLine("Kode Buah Strawberry: " + kodebuah.getKodeBuah("Strawberry"));
+
+        
     }
 }
